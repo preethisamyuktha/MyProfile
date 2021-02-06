@@ -1,4 +1,5 @@
 ---
+layout: demo
 signoff: Adios!
 ---
 
