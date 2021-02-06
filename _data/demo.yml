@@ -1,0 +1,9 @@
+-   number: 1
+    method: add 1
+    result: 2
+-   number: 2
+    method: add 2
+    result: 4
+-   number: 3
+    method: add 3
+    result: 6
