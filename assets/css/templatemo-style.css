@@ -37,6 +37,7 @@ textarea {
 a,
 a:hover {
     text-decoration: none;
+	color: yellow;
 }
 
 p {
@@ -208,7 +209,7 @@ html {
 
 .menu a {
     text-decoration: none;
-    color: inherit;
+    color: grey;
 }
 
 .menu {
