@@ -25,7 +25,7 @@
         "tags": [
           "Facts"
         ],
-        "summary": "RetrieveS a list of all the facts in the database.",
+        "summary": "Retrieves a list of all the facts in the database.",
         "responses": {
           "200": {
             "description": "successful operation",
