@@ -1,0 +1,84 @@
+openapi: 3.0.1
+info:
+  title: CAT Facts API
+  description: >-
+    Cat Facts API is an ad free, no cost API that sends cat facts via text
+    messages everyday to subscribed recipients.
+  version: 1.0.0
+servers:
+  - url: 'https://cat-fact.herokuapp.com/'
+  - url: 'http://cat-fact.herokuapp.com/'
+tags:
+  - name: Facts
+    description: Everything about cat facts.
+paths:
+  /facts:
+    get:
+      tags:
+        - Facts
+      summary: Retrieve the list of all the facts in the database.
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/List'
+        '400':
+          description: Invalid status value
+          content: {}
+components:
+  schemas:
+    List:
+      type: array
+      items:
+        $ref: '#/components/schemas/GetFacts'
+    status:
+      type: object
+      properties:
+        verified:
+          type: boolean
+          description: status of the fact.
+        sentCount:
+          type: number
+          description: The number of the times the fact was sent to a recipient.
+    GetFacts:
+      type: object
+      properties:
+        status:
+          $ref: '#/components/schemas/status'
+        type:
+          type: string
+          description: Type of fact.
+        deleted:
+          type: boolean
+          description: Indicates if the fact is deleted or not.
+        _id:
+          type: string
+          description: The unique ID of the fact.
+        user:
+          type: string
+          description: Unique identification of the user submitting the fact.
+        text:
+          type: string
+          description: Contains the cat fact.
+        __v:
+          type: integer
+        source:
+          type: string
+          description: Indicates the mode of fact submission.
+        updatedAt:
+          type: string
+          description: Time and date of when the fact was last updated.
+          format: date-time
+        createdAt:
+          type: string
+          description: Time and date of when the fact was created.
+          format: date-time
+        used:
+          type: boolean
+          description: Indicates if the fact was ever sent to a recipient or not.
+  securitySchemes:
+    catfacts_auth:
+      type: http
+      scheme: basic
