@@ -311,6 +311,10 @@ html {
     text-align: left;
     padding: 40px 40px;
 }
+th {
+    text-align: inherit;
+    column-width: 70px;
+}
 table.responses-table {
     background-color: #9ab0bf;
 }
