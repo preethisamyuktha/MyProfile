@@ -25,6 +25,9 @@
     color: #fff;
     letter-spacing: 0.5px;
 }
+span.url{
+	font-size: 10px;
+}
 .swagger-ui .opblock .opblock-summary-description {
     font-size: 15px;
     flex: 1 1 auto;

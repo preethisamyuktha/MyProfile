@@ -296,10 +296,12 @@ html {
 }
 
 .section-heading {
-    text-align: center;
+    text-align: left;
     padding: 40px 40px;
 }
-
+table.responses-table {
+    background-color: #9ab0bf;
+}
 .section-heading h2 {
     font-size: 32px;
     font-weight: 700;
@@ -307,7 +309,7 @@ html {
 }
 
 .section-heading .line-dec {
-    width: 30px;
+    width: auto;
     height: 3px;
     background-color: #a43f49;
     margin: 5px auto;
